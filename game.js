@@ -1,12 +1,15 @@
-function computerPlay() {
-    randNum = Math.floor(Math.random() * 3);
-    moves = [Rock, Paper, Scissors];
+    function computerPlay() {
 
-    return moves[randNum];
-}
+        randNum = Math.floor(Math.random() * 3);
+        moves = ['Rock', 'Paper', 'Scissors'];
+
+        return moves[randNum];
+    }
+
+    console.log(computerPlay())
 
 function playRound(playerSelection, computerSelection) {
-	// your code here!
+	
 }
 
 const playerSelection = 'rock'
