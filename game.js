@@ -44,17 +44,25 @@ function playRound(caseInsensitive, computerSelection) {
               }
 
           break;
-      }
-
-      function game() {
-
-        for (let i = 0; i < 6; i++) {
-
-          let choice = [];
-            choice[i]= prompt("Player please enter your first choice? Rock, Paper, or Scissors?")
-            result = playRound(choice[i],computerSelection);
-        }
-        return result;
-      }
+      }  
 }
+
+function game() {
+
+  for (let i = 0; i < 6; i++) {
+
+    let choice =  window.prompt("Player please enter your choice? Rock, Paper, or Scissors?")
+    
+    let result= playRound(choice[i],computerSelection);
+  }
+  return result;
+}
+
+
+game();
+
+
+
+
+
 
