@@ -1,20 +1,19 @@
 function computerPlay() {
-  let randNum = Math.floor(Math.random() * moves.length);
   const moves = ['Rock', 'Paper', 'Scissors'];
-  
+  let randNum = Math.floor(Math.random() * moves.length);
   return moves[randNum];
     }
 function playRound(playerSelection, computerSelection) {
     caseInsensitive = playerSelection.toLowerCase(); 
     playerWins = 'Player is the winner';
     compWins = 'Computer is the winner';
-    tie = "Tie! Play again!"
+    tie = "Tie! Play again!";
 
     switch(computerSelection) {
       case 'Rock':
         if (caseInsensitive === 'Rock') {
             return tie;
-  
+
         } else if (caseInsensitive === 'Paper') {
             return playerWins;
             
@@ -25,8 +24,10 @@ function playRound(playerSelection, computerSelection) {
       case 'Paper':
           if (caseInsensitive === 'Rock') {
               return compWins;
+
             } else if (caseInsensitive === 'Paper') {
               return tie;
+
             } else {
               return playerWins;
             }
@@ -34,30 +35,31 @@ function playRound(playerSelection, computerSelection) {
       case 'Scissors':
           if (caseInsensitive === 'Rock') {
               return playerWins;
+
             } else if (caseInsensitive === 'Paper') {
                return compWins;
+
             } else {
               return tie;
             }
   
         break;
     }  
-   
 }
 
 function game() {
-  for (let i = 0; i < 6; i++) {
-
-  }
-  return result;
+  let numberRounds = prompt("How many times would you like to play the game?");
+  for (let i = 0; i <= numberRounds; i++) {
+    let userInput = prompt("Choose between Rock, Paper, or Scissors");
+    let roundWinner = playRound(userInput,computerPlay());
+    alert(roundWinner);
+    i++;
+}
 }
 
+game();
 
-const buttons = document.querySelectorAll('button');
 
-buttons.forEach(button => { 
-  button.addEventListener('click', playRound);
-});
 
 
 
