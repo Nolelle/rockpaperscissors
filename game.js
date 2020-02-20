@@ -51,6 +51,7 @@ function game() {
   let numberRounds = prompt("How many times would you like to play the game?");
   for (let i = 0; i <= numberRounds; i++) {
     let userInput = prompt("Choose between Rock, Paper, or Scissors");
+    prompt("Computer chose"${})
     let roundWinner = playRound(userInput,computerPlay());
     alert(roundWinner);
     i++;
